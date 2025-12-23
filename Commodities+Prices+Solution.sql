@@ -64,7 +64,7 @@ FROM region_info ri
 INNER JOIN price_details pd
 ON ri.id = pd.Region_Id
 GROUP BY State
-ORDER BY COUNT(pd.id)
+ORDER BY COUNT(pd.id)  
 LIMIT 1) 
 GROUP BY State,Commodity
 ORDER BY data_count DESC
